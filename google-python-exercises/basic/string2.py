@@ -16,8 +16,18 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-  # +++your code here+++
-  return
+  # Define return variable
+  return_value = ''
+  # Length test
+  if len(s) < 3:
+    return_value = s
+  else:
+    # Test for existing 'ing'
+    if s[-3:] == 'ing':
+      return_value = s + 'ly'
+    else:
+      return_value = s + 'ing'
+  return return_value
 
 
 # E. not_bad
@@ -29,7 +39,10 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  # +++your code here+++
+  # Define variable for location of phrase 'not'
+  where_not = s.find('not')
+  # Test for location of phrase 'bad'
+
   return
 
 
