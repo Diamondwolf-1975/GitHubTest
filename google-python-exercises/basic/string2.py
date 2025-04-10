@@ -40,10 +40,11 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
   # Define variable for location of phrase 'not'
-  where_not = s.find('not')
-  # Test for location of phrase 'bad'
-
-  return
+  n = s.find('not')
+  b = s.find('bad')
+  if n != -1 and b != -1 and b > n:
+    s = s[:n] + 'good' + s[b+3:]
+  return s
 
 
 # F. front_back
@@ -55,7 +56,14 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
-  return
+  # Figure out the middle position of each string.
+  a_middle = len(a) // 2  # Use the // operator to perform integer division.
+  b_middle = len(b) // 2
+  if len(a) % 2 == 1:  # add 1 if length is odd
+    a_middle = a_middle + 1
+  if len(b) % 2 == 1:
+    b_middle = b_middle + 1
+  return a[:a_middle] + b[:b_middle] + a[a_middle:] + b[b_middle:]
 
 
 # Simple provided test() function used in main() to print
