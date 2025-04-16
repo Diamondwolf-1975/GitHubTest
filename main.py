@@ -4,5 +4,3 @@
 # URL https://www.youtube.com/watch?v=ix9cRaBkVe0
 
 # Restart at time index 37:55
-
-
